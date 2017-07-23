@@ -17,3 +17,5 @@
 * What is a merge conflict?
 
 >A merge conflict is when two or more updates don't work together.
+
+>Thanks for reading!
