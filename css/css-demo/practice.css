@@ -12,3 +12,16 @@
 .list{
 	font-size: 0.8em;
 }
+
+ul > li{
+	color: red;
+}
+
+a {
+    color: #333853;
+}
+a:visited {
+    color: #7479A0;
+}
+a:hover {
+    color: #CBD6EC;
