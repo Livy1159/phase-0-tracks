@@ -1,0 +1,13 @@
+- Wait until the elevator door opens in front of you.
+- Walk forward until you are in the middle of the elevator.
+- Sort through the numbers on the buttons.
+- If that number is the floor you want:
+	- Push the button.
+	- Wait for the elevator to reach your floor.
+	- Get off the elevator.
+- Otherwise:
+	- Keep sorting.
+
+
+
+
