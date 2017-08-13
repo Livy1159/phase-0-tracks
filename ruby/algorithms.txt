@@ -3,10 +3,21 @@
 - Sort through the numbers on the buttons.
 - If that number is the floor you want:
 	- Push the button.
+	- Quit sorting.
 	- Wait for the elevator to reach your floor.
 	- Get off the elevator.
 - Otherwise:
 	- Keep sorting.
+
+Picking out the right size of jeans.
+
+-Pick up the first pair of jeans and look at the size.
+-If this is your size:
+	- Pick up the jeans.
+	- Quit sorting.
+	- Put the jeans on.
+- Otherwise:
+	- keep sorting.
 
 
 
