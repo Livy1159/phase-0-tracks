@@ -1,7 +1,3 @@
-#switch first name and last name
-#change vowels to next vowel in aeiou
-#change cosonants to next in alphabet
-
 #Failed attemp at switching vowels.
 
 #def vowel_switch(str)
@@ -47,13 +43,27 @@ end
 
 puts "What is the real name?"
 name = gets.chomp.to_s
-while name != "quit"
-  p name_switch("#{name}")
-puts "Any other names?"
-other_name = gets.chomp
-  p name_switch("#{other_name}")
-  if other_name || name == "quit"
-  end
-  break
+p name_switch("#{name}")
 
+until name == ""
+puts "What is the real name?"
+name = gets.chomp.to_s
+  if name == ""
+  end
+  if name != ""
+  p name_switch("#{name}")
+  fake_name = name_switch("#{name}")
+  end
 end
+
+name = {"#{name}": "#{fake_name}",
+  
+}
+name.each do |name, fake_name|
+  puts "#{fake_name} is actually #{name}."
+  
+end
+
+p name
+
+#Work on getting name and fake_name to store in hash.
