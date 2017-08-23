@@ -1,3 +1,4 @@
+
 #Failed attemp at switching vowels.
 
 #def vowel_switch(str)
@@ -37,33 +38,35 @@
 #This will reverse the first and last name as well as reverse the order of the letters.
 #It will also star out any vowels
 def name_switch(str)
+  name_hash = Hash.new,
   str.reverse.tr("\\^aeiou", "*")
 end
-
 
 puts "What is the real name?"
 name = gets.chomp.to_s
 p name_switch("#{name}")
 
-until name == ""
+name.split(" ").each do |name, fake_name|
+  name_switch("#{name}")
+  puts "#{fake_name} is actually #{name}."
+end
+
+
+
 puts "What is the real name?"
-name = gets.chomp.to_s
+name = gets.chomp
+until name == ""
   if name == ""
-  end
-  if name != ""
-  p name_switch("#{name}")
+  else 
   fake_name = name_switch("#{name}")
   end
 end
 
-name = {"#{name}": "#{fake_name}",
-  
-}
-name.each do |name, fake_name|
+name.split(" ").each do |name, fake_name|
+  name_switch("#{name}")
   puts "#{fake_name} is actually #{name}."
-  
 end
 
-p name
+
 
 #Work on getting name and fake_name to store in hash.
