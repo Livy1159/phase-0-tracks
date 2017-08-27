@@ -84,4 +84,11 @@ update_quantity(list, "ice cream", 4)
 remove_item(list, "lemonade")
 update_quantity(list, "ice cream", 1)
 
+# * I learned that pseudocoding can be a very important part of coding especially when working with someone else because it is a good way to be on the same page with your ideas.
+# * There are different benefits to using arrays and hashes, but hashes are definitely better for items that also have a value.
+# * A method returns nil unless you ask it to print or return something else.
+# * You can pass strings, integers, variables
+# * You can pass informatin between methods by using the same arguments.
+# * I feel a lot more comfortable with methods after this gps.
+
 print_groceries(list)
