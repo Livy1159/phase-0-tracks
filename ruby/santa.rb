@@ -1,4 +1,7 @@
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+	
 	def speak
 		puts "Ho, ho, ho! Haaaapy holidays!"
 	end
@@ -20,9 +23,37 @@ class Santa
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 	end
+
+	def celebrate_birthday
+		@age += 1
+		puts "Santa is #{@age}"
+	end
+
+	def get_mad_at(name)
+		if @reindeer_ranking.include? name
+			@reindeer_ranking.delete("#{name}")
+			@reindeer_ranking.insert(-1, name)
+			puts "#{name}, you have really disappointed me! Here are the new rankings: #{@reindeer_ranking}"
+		end
+	end
+
+	def gender
+		@gender
+	end
 end
 
 santa = Santa.new("female", "hispanic")
 santa.speak
 santa.eat_milk_and_cookies("snickerdoodle")
 santa.about
+santa.celebrate_birthday
+santa.get_mad_at("Vixen")
+santa.gender = "male"
+puts "Santa now identifies as #{santa.gender}."
+santa.age
+
+santa = Santa.new("female", "white")
+santa.celebrate_birthday
+santa.about
+
+
