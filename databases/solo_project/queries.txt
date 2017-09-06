@@ -1,0 +1,35 @@
+1. INPUT: SELECT * FROM bears;
+	
+	OUTPUT: 1|Grizz|dark brown|600|1
+			2|Snowball|white|200|3
+			3|Spot|black and white|300|2
+			4|Patty|light brown|400|1
+
+2. INPUT: UPDATE bears SET weight=420 WHERE name="Patty";
+		  SELECT * FROM bears;
+	
+	OUTPUT: 1|Grizz|dark brown|600|1
+			2|Snowball|white|200|3
+			3|Spot|black and white|300|2
+			4|Patty|light brown|420|1
+
+3. INPUT: SELECT * FROM bears, bear_types WHERE bears.bear_id = bear_types.id;
+	
+	OUTPUT: 1|Grizz|dark brown|600|1|1|grizzly
+			2|Snowball|white|200|3|3|polar
+			3|Spot|black and white|300|2|2|panda
+			4|Patty|light brown|420|1|1|grizzly
+
+4. INPUT: SELECT bears.name, bear_types.name, weight FROM bears JOIN bear_types ON bears.bear_id = bear_types.id;
+
+	OUTPUT: Grizz|grizzly|600
+			Snowball|polar|200
+			Spot|panda|300
+			Patty|grizzly|420
+
+5. INPUT: DELETE FROM bears WHERE name="Patty";
+		  SELECT * FROM bears;
+
+	OUTPUT: 1|Grizz|dark brown|600|1
+			2|Snowball|white|200|3
+			3|Spot|black and white|300|2
