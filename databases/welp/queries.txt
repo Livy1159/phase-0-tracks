@@ -1,0 +1,32 @@
+2. INPUT: SELECT * FROM reviews
+		INNER JOIN businesses ON businesses.id = reviews.business_id
+		INNER JOIN users ON users.id = reviews.user_id;
+
+OUTPUT: 1|4|Almost best wedding ever!|1|3|1|Grundy Hollow 			Wedding Chapel|3|Steven|Wonder
+		2|1|Better out than in|2|2|2|Sushi World|2|Angela|Jolie
+		3|3|Totally adequate experience|3|1|3|Lotus Yoga|1|Brad|Pitt
+		4|1|My wife got cold feet|1|1|1|Grundy Hollow Wedding Chapel|1|Brad|Pitt
+
+
+3. INPUT: SELECT businesses.name, users.first_name, 			users.last_name, reviews.stars, reviews.comment
+	FROM reviews
+	INNER JOIN businesses ON businesses.id = reviews.business_id
+	INNER JOIN users ON users.id = reviews.user_id;
+
+	OUTPUT: Grundy Hollow Wedding 									Chapel|Steven|Wonder|4|Almost best wedding ever!
+			Sushi World|Angela|Jolie|1|Better out than in
+			Lotus Yoga|Brad|Pitt|3|Totally adequate experience
+			Grundy Hollow Wedding Chapel|Brad|Pitt|1|My wife got cold feet
+
+4. INPUT:
+	SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment
+	FROM reviews
+	INNER JOIN businesses ON businesses.id = reviews.business_id
+	INNER JOIN users ON users.id = reviews.user_id
+	WHERE businesses.name = "Grundy Hollow Wedding Chapel";
+
+	OUTPUT:
+	Grundy Hollow Wedding Chapel|Steven|Wonder|4|Almost best wedding ever!
+	Grundy Hollow Wedding Chapel|Brad|Pitt|1|My wife got cold feet
+
+
